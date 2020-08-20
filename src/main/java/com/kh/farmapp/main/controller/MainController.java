@@ -28,18 +28,6 @@ public class MainController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Model model) {
 		
-		// 현재날짜 불러오기
-		// 캘린더 객체 선언
-		Calendar current = Calendar.getInstance();
-		
-		// Date 를 String 으로 바꿔줄 SimpleDateFormat 객체 선언
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
-		
-		// 현재 년도 값을 넣을 변수
-		String currYear = sdf.format(current.getTime());
-		
-		// 현재 년도 뷰에 값으로 보내주기
-		model.addAttribute("currYear", currYear);
 		
 		return "/main/index";
 	}

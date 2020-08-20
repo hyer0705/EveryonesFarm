@@ -26,6 +26,11 @@
 	border: none;
 }
 
+.main__footer .footer__terms span a {
+	text-decoration: none;
+	color: #D5D5D5;
+}
+
 .main__footer .footer__comp-info, .main__footer .footer__terms {
 	width: 700px;
 	margin: 0 auto 10px;

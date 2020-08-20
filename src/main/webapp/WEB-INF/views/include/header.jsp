@@ -15,22 +15,12 @@
 <!-- header, footer, main css 파일 -->
 <link rel="stylesheet" href="<%=request.getContextPath() %>/resources/css/main_header.css" />
 <link rel="stylesheet" href="<%=request.getContextPath() %>/resources/css/main_main.css" />
+<link rel="stylesheet" href="<%=request.getContextPath() %>/resources/css/main_modal.css" />
 <link rel="stylesheet" href="<%=request.getContextPath() %>/resources/css/main_footer.css" />
 
 <style type="text/css">
 * {
 	box-sizing: border-box;
-}
-
-body{
-	padding: 0;
-	margin: 0;
-}
-
-.wrapper {
-	width: 980px;
-	margin: 0 auto;
-/* 	margin-top: 180px; */
 }
 </style>
 
