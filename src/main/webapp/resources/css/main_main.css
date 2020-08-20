@@ -1,0 +1,105 @@
+@charset "UTF-8";
+.wrapper .main__main {
+	margin-top: 50px;
+} 
+/* 제철 먹거리 css */
+.main__main .main__food
+, .main__main .main__farm
+, .main__main .main__farmnews {
+	width: 100%;
+	margin-bottom: 100px;
+}
+.main__food .food__top
+, .main__farmnews .farmnews__top {
+    padding: 0px 15px;
+	display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+.food__top .food__top-title
+, .farmnews__top .farmnews__top-title {
+	border-bottom: 3px solid #789F6F;
+}
+.food__top .food__top-more i
+, .farmnews__top .farmnews__top-more i {
+	margin-left: 7px;
+    color: #789F6F;
+    cursor: pointer;
+}
+/* 먹거리 top3 사진 */
+.main__food .food__bottom {
+	display: flex;
+    justify-content: space-between;
+    padding: 0px 15px;
+    margin-top: 20px;
+}
+.food__bottom .food__bottom-wrap {
+ 	width: 300px;
+/*  	height: 400px; */
+ 	display: flex;
+ 	flex-direction: column;
+ 	overflow: hidden;
+}
+.food__bottom-wrap .bottom-wrap__food-img
+, .farm__bottom-wrap .bottom-wrap__food-img {
+	object-fit: cover;
+}
+.food__bottom-wrap a
+, .farm__bottom-wrap a {
+	text-decoration: none;
+	color: black;
+	font-size: 18px;
+}
+/* 먹거리 이름 */
+.food__bottom-wrap .bottom-wrap__food-desc
+, .farm__bottom-wrap .bottom-wrap__farm-desc {
+	margin-top: 7px;
+}
+/* 이달의 농장 Top3 리스트 css */
+/* 이달의 농장 선 */
+.farm__top .farm__top-line {
+	height: 3px;
+	background: #789F6F;
+}
+/* 이달의 농장 박스를 감싸는 div */
+.farm__top .farm__top-title {
+	width: 100%;
+	position: relative;
+}
+/* 이달의 농장 박스 */
+.farm__top-title .farm__top-titlebox {
+	margin: 0 auto;
+	width: 120px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #789F6F;
+	position: absolute;
+	top: -20px;
+	left: 420px;
+}
+/* 이달의 농장 사진 과 이름 */
+.main__farm .farm__bottom {
+	margin-top: 50px;
+	padding: 0 15px;
+	display: flex;
+	justify-content: space-between;
+}
+.main__farmnews .farmnews__bottom {
+	padding: 0 15px;
+    margin-top: 50px;
+}
+.farmnews__bottom table {
+	border-collapse: collapse;
+	width: 100%;
+	border-top: 1px solid #605759;
+	border-bottom: 1px solid #605759;
+}
+.farmnews__bottom th
+, .farmnews__bottom td {
+	padding: 15px 10px;
+	text-align: center;
+	border-top: 1px solid #605759;
+	border-bottom: 1px solid #605759;
+}

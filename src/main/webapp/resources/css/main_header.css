@@ -1,0 +1,212 @@
+@charset "UTF-8";
+
+/* 여기부터 header 부분 */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 170px;
+    background: white;
+	border-bottom: 1px solid #789F6F;
+	box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+	z-index: 999;
+}
+
+/* 메인메뉴 윗 부분 */
+.header__top {
+	border-bottom: 1px solid #789F6F;
+}
+
+.header__top-wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 980px;
+    height: 100px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+/* 로고 */
+.header__top-wrap .top__logo {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 로고 옆에 로그인, 회원가입 부분 */
+.header__top-wrap .top__member-desc {
+	display: flex;
+	align-items: flex-end;
+}
+
+.header__top-wrap .top__member-desc a {
+	opacity: 0.8;
+	color: black;
+	text-decoration: none;
+	padding: 0 5px;
+}
+
+.header__top-wrap .top__member-desc a:first-child{
+	border-right: 1px solid green;
+}
+
+/* 로고 옆 날씨 알려주는 부분 */
+.top__weather {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    font-size: 14px;
+}
+
+/* 메인메뉴 부분 */
+nav {
+	width: 980px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	background: white;
+}
+/* ul, li 초기화 */
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* 메인메뉴 li */
+#menu__main > li {
+	float: left;
+	position: relative;
+	width: 180px;
+ 	padding: 0 5px;
+/* 	border-right: 1px solid #789F6F; */
+}
+
+/* 메인메뉴 hover 시 */
+#menu__main > li:hover > a {
+	color: #789F6F;
+	font-weight: bold;
+}
+
+/* 메인메뉴(ul)의 li의 a */
+#menu__main > li > a {
+	/* 글씨 색 */
+	color: black;
+	font-size: 18px;
+	text-align: center;
+	text-decoration: none;
+	
+	display: block;
+	padding: 10px 0;
+}
+
+/* 서브 메뉴 */
+.menu__sub-food
+, .menu__sub-activity {
+	position: absolute;
+	/* 메인메뉴 바로 아래에 위치하도록 위치 조정 */
+	right: 0;
+	top: 44px;
+	background: white;
+	/* 메인메뉴에 hover 시에만 보이게 하기 */
+	opacity: 0;
+	visibility: hidden;
+	/* 서서히 보이게 하는 효과 */
+	transition: all 0.2s ease-in;
+}
+
+.menu__sub-food > li
+,.menu__sub-activity > li {
+	width: 180px;
+ 	border: 1px solid #789F6F;
+	/* 텍스트 가운데 정렬 */
+	text-align: center;
+}
+
+.menu__sub-food > li:first-child
+,.menu__sub-activity > li:first-child {
+	border-bottom: none;
+}
+
+.menu__sub-food > li > a
+, .menu__sub-activity > li > a {
+	display: block;
+	padding: 10px 0;
+	text-decoration: none;
+	/* 글씨 색 */
+	color: black;
+}
+
+/* 서브메뉴 호버시 */
+.menu__sub-food > li:hover > a
+, .menu__sub-activity > li:hover > a {
+	color: #789F6F;
+	font-weight: bold;
+}
+
+/* 메인메뉴 hover 시 서브메뉴 보이게하기 */
+#menu__main >li:nth-child(2):hover .menu__sub-food
+, #menu__main >li:nth-child(4):hover .menu__sub-activity {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* 이미지 슬라이더 */
+/* 이미지 슬라이더 박스 */
+div#sliderbox {
+	width: 100%;
+	height: 600px;
+/* 	border: 1px solid red; /* 임시 선 */
+	
+	margin: 0;
+	overflow: hidden;
+}
+/* 이미지 리스트 */
+ul#slider {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	
+	position: relative;
+}
+/* 이미지 항목 */
+ul#slider li {
+	position: absolute;
+	width: 100%;
+	height: 600px;
+}
+/* 이미지 */
+ul#slider li img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* 이미지 슬라이드 내의 점들 표시 */
+.header__bottom {
+	position: relative;
+}
+
+.slider-dots-wrap {
+	width: 100%;
+	position: absolute;
+	bottom: 25px;
+}
+
+#slider-dots {
+	width: 150px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 0 auto;
+}
+#slider-dots .dot {
+	width: 15px;
+	height: 15px;
+	background: #ccc;
+	border-radius: 50%;
+	cursor: pointer;
+}

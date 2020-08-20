@@ -1,0 +1,127 @@
+package com.kh.farmapp.mypage.user.model.dao;
+
+import java.util.Map;
+
+import common.dto.AnsweredOneonone;
+import common.dto.Application;
+import common.dto.Basket;
+import common.dto.Order;
+import common.dto.Product;
+import common.dto.QuestionOneonone;
+import common.dto.UserAddress;
+import common.dto.UserProfile;
+import common.dto.UserTB;
+
+public class MyPageDaoImpl implements MyPageDao{
+
+	@Override
+	public int modifyUser(UserTB user) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int modifyprofile(UserTB user) {
+		
+		// 클래스 다이어그램 용 DTO 객체 선언
+		UserProfile up = new UserProfile();
+		
+		return 0;
+	}
+
+	@Override
+	public int leave(String userId) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public QuestionOneonone o3List() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public QuestionOneonone o3Detail(int qNo) {
+		
+		// 클래스 다이어그램 용 DTO 객체 선언
+		QuestionOneonone q = new QuestionOneonone();
+		AnsweredOneonone a = new AnsweredOneonone();
+		UserTB u = new UserTB();
+		
+		return null;
+	}
+
+	@Override
+	public int o3Upload(QuestionOneonone qO3) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int o3Modify(int qNo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int o3Delete(int qNo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public Application appliActList() {
+		
+		// 클래스 다이어그램 용 Dto 객체 선언
+		Application application = new Application();
+		
+		return null;
+	}
+
+	@Override
+	public Application appliHelpList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Basket basketList() {
+		
+		// 클래스 다이어그램 용 DTO 객체 선언
+		Basket basket = new Basket();
+		
+		return null;
+	}
+
+	@Override
+	public int addProduct(Map<String, Object> map) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public Order orderList() {
+		
+		// 클래스다이어그램 용 DTO 객체 선언
+		Order order = new Order();
+		Product p = new Product();
+		UserTB user = new UserTB();
+		UserAddress ua = new UserAddress();
+		
+		return null;
+	}
+
+	@Override
+	public Product orderDetail(int orderNo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public UserAddress getAddress(UserTB user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

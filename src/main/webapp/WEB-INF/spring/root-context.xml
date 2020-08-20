@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+		
+	<!-- org.mybatis.spring.SqlSessionFactoryBean 의
+		setDataSource 메서드에 넣어주기 위한 dataSource 타입의 객체를 생성 -->
+<!-- 	<bean id="dataSourceSpied"  -->
+<!-- 	class="org.apache.commons.dbcp.BasicDataSource"> -->
+<!-- 		<property name="driverClassName" value="${driver}"/>  -->
+<!-- 		<property name="url" value="${url}"/> -->
+<!-- 		<property name="username" value="${username}"/> -->
+<!-- 		<property name="password" value="${password}"/> -->
+<!-- 	</bean> -->
+
+		<!-- 로그를 찍는 프록시 객체를 생성 해준다. -->
+<!-- 	<bean id="dataSource" class="net.sf.log4jdbc.Log4jdbcProxyDataSource">  -->
+<!-- 		<constructor-arg ref="dataSourceSpied" />  -->
+<!-- 		<property name="logFormatter">  -->
+<!-- 			<bean class="net.sf.log4jdbc.tools.Log4JdbcCustomFormatter">  -->
+<!-- 				<property name="loggingType" value="MULTI_LINE" />  -->
+<!-- 				<property name="sqlPrefix" value="SQL:" />  -->
+<!-- 			</bean>  -->
+<!-- 		</property>  -->
+<!-- 	</bean> -->
+	
+	
+	<!-- 
+		1. PropertyPlaceholderConfigurer 를 사용하여
+		db.properties 파일에 등록한 설정파일에 불러온다.
+	 -->
+	 <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	 	<property name="locations">
+	 		<list>
+	 			<!-- classpath: src/main/resources -->
+	 			<value>classpath:mybatis/db.properties</value>
+	 		</list>
+	 	</property>
+	 </bean>
+	
+	<!-- org.mybatis.spring.SqlSessionFactoryBean의 setDataSource 메서드에 넣어주기 위한 dataSource 타입의 객체를 생성 -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="${driver}" />
+		<property name="url" value="${url}" />
+		<property name="username" value="${username}" />
+		<property name="password" value="${password}" />
+	</bean>
+	
+	<!-- sqlSessionFactoryBean 등록 -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:mybatis/config.xml" />
+	</bean>
+	
+	<!-- SqlSessionTemplate 생성 -->
+	 <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactory" />
+	</bean>
+	
+	<!-- 스프링이 multipart 데이터 처리를 위해
+		제공 해주는 클래스  -->
+<!-- 	<bean id="multipartResolver" -->
+<!-- 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver"> -->
+ 		<!-- 업로드 가능한 최대 용량 -->
+<!-- 		<property name="maxUploadSize" value="100000000"/> -->
+<!-- 		<property name="maxInMemorySize" value="100000000"/>	 -->
+<!-- 	</bean> -->
+		
+</beans>
