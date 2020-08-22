@@ -68,6 +68,9 @@
 }
 /* 이달의 농장 박스 */
 .farm__top-title .farm__top-titlebox {
+	color: white;
+    border-radius: 20px;
+	
 	margin: 0 auto;
 	width: 120px;
 	height: 40px;
