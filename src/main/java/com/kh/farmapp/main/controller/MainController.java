@@ -1,7 +1,7 @@
 package com.kh.farmapp.main.controller;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
+import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.kh.farmapp.main.model.service.MainService;
+
+import common.dto.Application;
 
 @Controller
 public class MainController {
@@ -27,9 +29,15 @@ public class MainController {
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Model model) {
-		
+	
+		// 조인 연산된 결과 콘솔에 찍기 -- test 용
+//		List<Map<String, Object>> testMap = mainService.selectTest();
+//		for(int i = 0; i < testMap.size(); i++) {
+//			System.out.println(testMap.get(i).toString());
+//		}
 		
 		return "/main/index";
 	}
+	
 	
 }

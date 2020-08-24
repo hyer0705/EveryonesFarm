@@ -4,6 +4,31 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@include file="../include/header.jsp" %>
+
+<!-- menu 의 float 속성 때문에 생성한 div -->
+<div style="clear: both; margin-top: 170px;"></div>
+<div class="header__bottom">
+	<div id="sliderbox">
+		<ul id="slider">
+			<li><img src="/everyonesfarm/resources/img/farm1.jpg" /></li>
+			<li><img src="/everyonesfarm/resources/img/farm2.jpg" /></li>
+			<li><img src="/everyonesfarm/resources/img/farm3.jpg" /></li>
+			<li><img src="/everyonesfarm/resources/img/farm4.jpg" /></li>
+			<li><img src="/everyonesfarm/resources/img/farm5.jpg"/></li>
+		</ul>
+	</div>
+	
+	<!-- 이미지 슬라이드 list를 알려주는 점들 -->
+	<div class="slider-dots-wrap">
+	<div id="slider-dots">
+		<c:forEach var="i" begin="0" end="4">
+			<div class="dot" data-idx=${i + 1 }></div>
+		</c:forEach>
+	</div>
+	</div>
+</div>
+
+
 <div class="wrapper">
 	<!-- main -->
 	<main class="main__main">

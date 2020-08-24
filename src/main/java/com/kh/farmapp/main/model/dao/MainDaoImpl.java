@@ -1,11 +1,13 @@
 package com.kh.farmapp.main.model.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import common.dto.Application;
 import common.dto.Farm;
 import common.dto.FarmNews;
 import common.dto.Product;
@@ -33,6 +35,11 @@ public class MainDaoImpl implements MainDao {
 	@Override
 	public List<FarmNews> selectLatestFarmNews() {
 		return null;
+	}
+	
+	@Override
+	public List<Map<String, Object>> selectTest() {
+		return session.selectList("TEST.testSelect");
 	}
 
 }

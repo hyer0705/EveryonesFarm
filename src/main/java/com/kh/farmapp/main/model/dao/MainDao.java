@@ -1,7 +1,9 @@
 package com.kh.farmapp.main.model.dao;
 
 import java.util.List;
+import java.util.Map;
 
+import common.dto.Application;
 import common.dto.Farm;
 import common.dto.FarmNews;
 import common.dto.Product;
@@ -29,5 +31,13 @@ public interface MainDao {
 	 * @return List<FarmNews> - 조회 결과 반환
 	 */
 	public List<FarmNews> selectLatestFarmNews();
+
+	/**
+	 * 조인 연산을 위한 테스트 method
+	 * 
+	 * @param testA
+	 * @return
+	 */
+	public List<Map<String, Object>> selectTest();
 
 }

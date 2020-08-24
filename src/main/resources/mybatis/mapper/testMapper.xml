@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="TEST">
+
+	<resultMap type="hashmap" id="testmap">
+		<id property="activitNo" column="ACTIVITY_NO" />
+		<result property="title" column="TITLE" />
+		<result property="content" column="CONTENT" jdbcType="CLOB" javaType="java.lang.String" />
+		<result property="people" column="PEOPLE" />
+	</resultMap>
+	<select id="testSelect" resultMap="testmap">
+		SELECT 
+			fa.ACTIVITY_NO, fa.TITLE, fa.CONTENT, a.people
+		FROM
+			FARM_ACTIVITY fa
+			, APPLICATION a
+		WHERE	1=1
+			and fa.activity_no = a.activity_no
+	</select>
+
+</mapper>
