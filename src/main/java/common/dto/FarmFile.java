@@ -8,7 +8,9 @@ public class FarmFile {
 	private String originName;
 	private String fileRename;
 	private String savePath;
+	private int isThumbnail;
 
+	// getter(), setter()
 	public int getFarmFileNo() {
 		return farmFileNo;
 	}
@@ -49,10 +51,19 @@ public class FarmFile {
 		this.savePath = savePath;
 	}
 
+	public int getIsThumbnail() {
+		return isThumbnail;
+	}
+
+	public void setIsThumbnail(int isThumbnail) {
+		this.isThumbnail = isThumbnail;
+	}
+
+	// toString()
 	@Override
 	public String toString() {
 		return "FarmFile [farmFileNo=" + farmFileNo + ", farmNo=" + farmNo + ", originName=" + originName
-				+ ", fileRename=" + fileRename + ", savePath=" + savePath + "]";
+				+ ", fileRename=" + fileRename + ", savePath=" + savePath + ", isThumbnail=" + isThumbnail + "]";
 	}
 
 }

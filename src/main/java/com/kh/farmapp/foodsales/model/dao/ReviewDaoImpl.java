@@ -5,10 +5,10 @@ import java.util.Map;
 
 import org.springframework.stereotype.Repository;
 
-import common.dto.Order;
 import common.dto.Product;
 import common.dto.Review;
 import common.dto.ReviewFile;
+import common.dto.TBOrder;
 import common.dto.UserTB;
 
 
@@ -37,7 +37,7 @@ public class ReviewDaoImpl implements ReviewDao{
 	public int writeReview(Review review, Product product) {
 		
 		// 클래스 다이어그램 용 DTO 객체 선언
-		Order o = new Order();
+		TBOrder o = new TBOrder();
 		
 		return 0;
 	}

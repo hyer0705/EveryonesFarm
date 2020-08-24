@@ -13,6 +13,7 @@ public class FarmDiary {
 	private String content;
 	private int farmNo;
 
+	// getter(), setter()
 	public int getDailyNo() {
 		return dailyNo;
 	}
@@ -69,6 +70,7 @@ public class FarmDiary {
 		this.farmNo = farmNo;
 	}
 
+	// toString()
 	@Override
 	public String toString() {
 		return "FarmDiary [dailyNo=" + dailyNo + ", title=" + title + ", hit=" + hit + ", enrollDate=" + enrollDate

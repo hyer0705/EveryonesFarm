@@ -4,9 +4,9 @@ import java.util.Map;
 
 import common.dto.Application;
 import common.dto.Basket;
-import common.dto.Order;
 import common.dto.Product;
 import common.dto.QuestionOneonone;
+import common.dto.TBOrder;
 import common.dto.UserAddress;
 import common.dto.UserTB;
 
@@ -54,7 +54,7 @@ public  interface MyPageService {
 	
 	//구매목록 리스트
 	//리스트 안에서 페이징 호출
-	public Order orderList();
+	public TBOrder orderList();
 	
 	//구매목록 상세 페이지
 	public Product orderDetail(int orderNo);

@@ -4,14 +4,16 @@ import java.util.Date;
 
 public class Review {
 
+	// member field
 	private int reviewNo;
 	private int productNo;
 	private String content;
 	private int userNo;
+	private int farmerNo;
 	private Date regDate;
 	private int reviewScore; // 나중에 double로 사용할 것인지 int 로 사용할 것인지 고민하기
-	private int isFarmer;
 
+	// getter(), setter()
 	public int getReviewNo() {
 		return reviewNo;
 	}
@@ -60,18 +62,18 @@ public class Review {
 		this.reviewScore = reviewScore;
 	}
 
-	public int getIsFarmer() {
-		return isFarmer;
+	public int getFarmerNo() {
+		return farmerNo;
 	}
 
-	public void setIsFarmer(int isFarmer) {
-		this.isFarmer = isFarmer;
+	public void setFarmerNo(int farmerNo) {
+		this.farmerNo = farmerNo;
 	}
 
+	// toString()
 	@Override
 	public String toString() {
 		return "Review [reviewNo=" + reviewNo + ", productNo=" + productNo + ", content=" + content + ", userNo="
-				+ userNo + ", regDate=" + regDate + ", reviewScore=" + reviewScore + ", isFarmer=" + isFarmer + "]";
+				+ userNo + ", farmerNo=" + farmerNo + ", regDate=" + regDate + ", reviewScore=" + reviewScore + "]";
 	}
-
 }

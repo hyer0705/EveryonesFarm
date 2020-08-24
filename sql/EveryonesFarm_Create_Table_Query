@@ -42,6 +42,9 @@
 
  DROP SEQUENCE notice_seq;
  DROP TABLE NOTICE;
+ 
+ DROP SEQUENCE ACTIVITY_SCHEDULE_SEQ;
+ DROP TABLE FARM_ACTIVITY_SCHEDULE;
 
  DROP SEQUENCE farm_activity_file_seq;
  DROP TABLE FARM_ACTIVITY_FILE;
@@ -646,6 +649,36 @@ ALTER TABLE FARM_ACTIVITY
 CREATE SEQUENCE farm_activity_seq;
 
 -- 이상 없음
+
+-- 체험 하나의 일정을 저장하는 테이블
+-- DROP TABLE FARM_ACTIVITY_SCHEDULE
+CREATE TABLE FARM_ACTIVITY_SCHEDULE
+(
+    SCHEDULE_NO    NUMBER           NOT NULL,                           -- 스케줄 번호 
+    ACTIVITY_NO    NUMBER           NULL,                               -- 체험 번호 외래키
+    TIME           VARCHAR2(300)    NULL,                               -- 일정 시간
+    CONTENT        VARCHAR2(500)    NULL,                               -- 일정 내용
+    ETC            VARCHAR2(500)    NULL,                               -- 일정 비고
+    CONSTRAINT FARM_ACTIVITY_SCHEDULE_PK PRIMARY KEY (SCHEDULE_NO)      -- 기본키 설정
+);
+
+COMMENT ON COLUMN FARM_ACTIVITY_SCHEDULE.SCHEDULE_NO IS '일정 번호';
+
+COMMENT ON COLUMN FARM_ACTIVITY_SCHEDULE.ACTIVITY_NO IS '체험 번호';
+
+COMMENT ON COLUMN FARM_ACTIVITY_SCHEDULE.TIME IS '체험 시간';
+
+COMMENT ON COLUMN FARM_ACTIVITY_SCHEDULE.CONTENT IS '활동 내용';
+
+COMMENT ON COLUMN FARM_ACTIVITY_SCHEDULE.ETC IS '비고';
+
+ALTER TABLE FARM_ACTIVITY_SCHEDULE                                          -- ACTIVITY_NO 체험번호 외래키
+    ADD CONSTRAINT FK_FARM_ACTIVITY_SCHEDULE_ACTI FOREIGN KEY (ACTIVITY_NO)
+        REFERENCES FARM_ACTIVITY (ACTIVITY_NO);
+
+-- 체험 일정 시퀀스 생성
+--DROP SEQUENCE ACTIVITY_SCHEDULE_SEQ;
+CREATE SEQUENCE ACTIVITY_SCHEDULE_SEQ;
 
 
 --13. 농장체험/일손돕기신청서(일반인 기준) 정보 테이블  ---FK(작성자,체험번호)		

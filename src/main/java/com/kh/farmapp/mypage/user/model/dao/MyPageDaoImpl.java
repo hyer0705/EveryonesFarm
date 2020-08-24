@@ -5,9 +5,9 @@ import java.util.Map;
 import common.dto.AnsweredOneonone;
 import common.dto.Application;
 import common.dto.Basket;
-import common.dto.Order;
 import common.dto.Product;
 import common.dto.QuestionOneonone;
+import common.dto.TBOrder;
 import common.dto.UserAddress;
 import common.dto.UserProfile;
 import common.dto.UserTB;
@@ -101,10 +101,10 @@ public class MyPageDaoImpl implements MyPageDao{
 	}
 
 	@Override
-	public Order orderList() {
+	public TBOrder orderList() {
 		
 		// 클래스다이어그램 용 DTO 객체 선언
-		Order order = new Order();
+		TBOrder order = new TBOrder();
 		Product p = new Product();
 		UserTB user = new UserTB();
 		UserAddress ua = new UserAddress();

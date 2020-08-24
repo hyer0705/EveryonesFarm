@@ -12,8 +12,8 @@ import com.kh.farmapp.mypage.farmer.model.dao.FamerMypageDao;
 
 import common.dto.Application;
 import common.dto.FarmingDailylog;
-import common.dto.Order;
 import common.dto.Product;
+import common.dto.TBOrder;
 import common.dto.UserTB;
 import common.util.FileUtil;
 import common.util.Paging;
@@ -90,7 +90,7 @@ public class FarmerMypageServiceImpl implements FarmerMypageService {
 	}
 
 	@Override
-	public List<Map<String, Object>> orderList(Order order) {
+	public List<Map<String, Object>> orderList(TBOrder order) {
 //		return famerMypageDao.orderList(order);
 		return null;
 	}

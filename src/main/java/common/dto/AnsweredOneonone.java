@@ -20,10 +20,8 @@ public class AnsweredOneonone {
 	private Date regDate;
 	// 질문 번호
 	private int questionNo;
-	// 농업인 회원의 질문인지 아닌지 확인?
-	// 이 컬럼도 필요 없을 거 같음
-	private int isFarmer;
 
+	// getter(), setter()
 	public int getAnsweredNo() {
 		return answeredNo;
 	}
@@ -72,18 +70,11 @@ public class AnsweredOneonone {
 		this.questionNo = questionNo;
 	}
 
-	public int getIsFarmer() {
-		return isFarmer;
-	}
-
-	public void setIsFarmer(int isFarmer) {
-		this.isFarmer = isFarmer;
-	}
-
+	// toString()
 	@Override
 	public String toString() {
 		return "AnsweredOneonone [answeredNo=" + answeredNo + ", title=" + title + ", content=" + content + ", adminNo="
-				+ adminNo + ", regDate=" + regDate + ", questionNo=" + questionNo + ", isFarmer=" + isFarmer + "]";
+				+ adminNo + ", regDate=" + regDate + ", questionNo=" + questionNo + "]";
 	}
 
 }

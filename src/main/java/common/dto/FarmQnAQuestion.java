@@ -4,15 +4,17 @@ import java.util.Date;
 
 public class FarmQnAQuestion {
 
+	// member field
 	private int farmQnaQuestionNo;
 	private int userNo;
+	private int farmerNo;
 	private int farmNo;
 	private String title;
 	private String content;
 	private Date regDate;
 	private int hits;
-	private int isFarmer;
 
+	// getter(), setter()
 	public int getFarmQnaQuestionNo() {
 		return farmQnaQuestionNo;
 	}
@@ -69,19 +71,20 @@ public class FarmQnAQuestion {
 		this.hits = hits;
 	}
 
-	public int getIsFarmer() {
-		return isFarmer;
+	public int getFarmerNo() {
+		return farmerNo;
 	}
 
-	public void setIsFarmer(int isFarmer) {
-		this.isFarmer = isFarmer;
+	public void setFarmerNo(int farmerNo) {
+		this.farmerNo = farmerNo;
 	}
 
+	// toString()
 	@Override
 	public String toString() {
-		return "FarmQnAQuestion [farmQnaQuestionNo=" + farmQnaQuestionNo + ", userNo=" + userNo + ", farmNo=" + farmNo
-				+ ", title=" + title + ", content=" + content + ", regDate=" + regDate + ", hits=" + hits
-				+ ", isFarmer=" + isFarmer + "]";
+		return "FarmQnAQuestion [farmQnaQuestionNo=" + farmQnaQuestionNo + ", userNo=" + userNo + ", farmerNo="
+				+ farmerNo + ", farmNo=" + farmNo + ", title=" + title + ", content=" + content + ", regDate=" + regDate
+				+ ", hits=" + hits + "]";
 	}
-
+	
 }

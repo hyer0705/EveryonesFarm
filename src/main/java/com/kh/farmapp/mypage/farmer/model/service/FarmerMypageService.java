@@ -8,7 +8,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import common.dto.Application;
 import common.dto.FarmingDailylog;
-import common.dto.Order;
+import common.dto.TBOrder;
 import common.dto.UserTB;
 
 public interface FarmerMypageService {
@@ -67,5 +67,5 @@ public interface FarmerMypageService {
 	 * @param order
 	 * @return 주문 현황 리스트로 나타내기
 	 */
-	public List<Map<String, Object>> orderList(Order order);
+	public List<Map<String, Object>> orderList(TBOrder order);
 }

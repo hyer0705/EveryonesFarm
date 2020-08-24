@@ -5,8 +5,8 @@ import java.util.Map;
 
 import common.dto.Application;
 import common.dto.FarmingDailylog;
-import common.dto.Order;
 import common.dto.Product;
+import common.dto.TBOrder;
 import common.dto.UserTB;
 import common.util.Paging;
 
@@ -72,6 +72,6 @@ public interface FamerMypageDao {
 	 * @param order
 	 * @return 주문 현황 리스트 나타내기 
 	 */
-	public String orderList(Order order);
+	public String orderList(TBOrder order);
 
 }

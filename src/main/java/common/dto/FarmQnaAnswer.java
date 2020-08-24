@@ -9,10 +9,10 @@ public class FarmQnaAnswer {
 	private String title;
 	private String content;
 	private Date regDate;
-	private int farmNo;
 	private int farmerNo;
 	private int farmQnaQuestionNo;
 
+	// getter(), setter()
 	public int getFarmQnaAnswerNo() {
 		return farmQnaAnswerNo;
 	}
@@ -45,14 +45,6 @@ public class FarmQnaAnswer {
 		this.regDate = regDate;
 	}
 
-	public int getFarmNo() {
-		return farmNo;
-	}
-
-	public void setFarmNo(int farmNo) {
-		this.farmNo = farmNo;
-	}
-
 	public int getFarmerNo() {
 		return farmerNo;
 	}
@@ -69,11 +61,11 @@ public class FarmQnaAnswer {
 		this.farmQnaQuestionNo = farmQnaQuestionNo;
 	}
 
+	// toString()
 	@Override
 	public String toString() {
 		return "FarmQnaAnswer [farmQnaAnswerNo=" + farmQnaAnswerNo + ", title=" + title + ", content=" + content
-				+ ", regDate=" + regDate + ", farmNo=" + farmNo + ", farmerNo=" + farmerNo + ", farmQnaQuestionNo="
-				+ farmQnaQuestionNo + "]";
+				+ ", regDate=" + regDate + ", farmerNo=" + farmerNo + ", farmQnaQuestionNo=" + farmQnaQuestionNo + "]";
 	}
 
 }

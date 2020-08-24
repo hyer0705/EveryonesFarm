@@ -2,12 +2,15 @@ package common.dto;
 
 public class FarmActivityFile {
 
+	// member field
 	private int activityFileNo;
 	private int activityNo;
 	private String originName;
 	private String fileRename;
 	private String savePath;
+	private int isThumbnail;
 
+	// getter(), setter()
 	public int getActivityFileNo() {
 		return activityFileNo;
 	}
@@ -47,11 +50,21 @@ public class FarmActivityFile {
 	public void setSavePath(String savePath) {
 		this.savePath = savePath;
 	}
+	
+	public int getIsThumbnail() {
+		return isThumbnail;
+	}
 
+	public void setIsThumbnail(int isThumbnail) {
+		this.isThumbnail = isThumbnail;
+	}
+
+	// toString()
 	@Override
 	public String toString() {
 		return "FarmActivityFile [activityFileNo=" + activityFileNo + ", activityNo=" + activityNo + ", originName="
-				+ originName + ", fileRename=" + fileRename + ", savePath=" + savePath + "]";
+				+ originName + ", fileRename=" + fileRename + ", savePath=" + savePath + ", isThumbnail=" + isThumbnail
+				+ "]";
 	}
 
 }

@@ -2,12 +2,15 @@ package common.dto;
 
 public class ReviewFile {
 
+	// member field
 	private int reviewFileNo;
 	private int reviewNo;
 	private String originName;
 	private String fileRename;
 	private String savePath;
+	private int isThumbnail;
 
+	// getter(), setter()
 	public int getReviewFileNo() {
 		return reviewFileNo;
 	}
@@ -48,10 +51,19 @@ public class ReviewFile {
 		this.savePath = savePath;
 	}
 
+	public int getIsThumbnail() {
+		return isThumbnail;
+	}
+
+	public void setIsThumbnail(int isThumbnail) {
+		this.isThumbnail = isThumbnail;
+	}
+
+	// toString()
 	@Override
 	public String toString() {
 		return "ReviewFile [reviewFileNo=" + reviewFileNo + ", reviewNo=" + reviewNo + ", originName=" + originName
-				+ ", fileRename=" + fileRename + ", savePath=" + savePath + "]";
+				+ ", fileRename=" + fileRename + ", savePath=" + savePath + ", isThumbnail=" + isThumbnail + "]";
 	}
-
+	
 }

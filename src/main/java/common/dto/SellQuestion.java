@@ -7,14 +7,16 @@ import java.util.Date;
  */
 public class SellQuestion {
 
+	// member field
 	private int sellQuestionNo;
 	private int productNo;
 	private String title;
 	private String content;
 	private Date writeDate;
 	private int userNo;
-	private int isFarmer;
+	private int farmerNo;
 
+	// getter(), setter()
 	public int getSellQuestionNo() {
 		return sellQuestionNo;
 	}
@@ -63,19 +65,20 @@ public class SellQuestion {
 		this.userNo = userNo;
 	}
 
-	public int getIsFarmer() {
-		return isFarmer;
+	public int getFarmerNo() {
+		return farmerNo;
 	}
 
-	public void setIsFarmer(int isFarmer) {
-		this.isFarmer = isFarmer;
+	public void setFarmerNo(int farmerNo) {
+		this.farmerNo = farmerNo;
 	}
 
+	// toString()
 	@Override
 	public String toString() {
 		return "SellQuestion [sellQuestionNo=" + sellQuestionNo + ", productNo=" + productNo + ", title=" + title
-				+ ", content=" + content + ", writeDate=" + writeDate + ", userNo=" + userNo + ", isFarmer=" + isFarmer
+				+ ", content=" + content + ", writeDate=" + writeDate + ", userNo=" + userNo + ", farmerNo=" + farmerNo
 				+ "]";
 	}
-
+	
 }

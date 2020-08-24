@@ -28,9 +28,10 @@ public class Product {
 	private String delivery;
 	// 상품이 제철 음식 여부를 나타내는 컬럼
 	private int isSeasonalFood;
-
+	// 판매된 양
 	private int sales;
 
+	// getter(), setter()
 	public int getProductNo() {
 		return productNo;
 	}
@@ -127,6 +128,7 @@ public class Product {
 		this.sales = sales;
 	}
 
+	// toString()
 	@Override
 	public String toString() {
 		return "Product [productNo=" + productNo + ", name=" + name + ", explain=" + explain + ", effect=" + effect

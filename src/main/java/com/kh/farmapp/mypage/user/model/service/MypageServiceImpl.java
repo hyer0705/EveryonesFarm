@@ -6,9 +6,9 @@ import com.kh.farmapp.mypage.user.model.dao.MyPageDao;
 
 import common.dto.Application;
 import common.dto.Basket;
-import common.dto.Order;
 import common.dto.Product;
 import common.dto.QuestionOneonone;
+import common.dto.TBOrder;
 import common.dto.UserAddress;
 import common.dto.UserTB;
 
@@ -90,7 +90,7 @@ public class MypageServiceImpl implements MyPageService{
 	}
 
 	@Override
-	public Order orderList() {
+	public TBOrder orderList() {
 		// TODO Auto-generated method stub
 		return null;
 	}

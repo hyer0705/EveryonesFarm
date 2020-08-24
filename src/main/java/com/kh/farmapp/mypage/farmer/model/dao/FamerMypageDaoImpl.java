@@ -7,8 +7,8 @@ import org.springframework.stereotype.Repository;
 
 import common.dto.Application;
 import common.dto.FarmingDailylog;
-import common.dto.Order;
 import common.dto.Product;
+import common.dto.TBOrder;
 import common.dto.UserTB;
 import common.util.Paging;
 
@@ -78,7 +78,7 @@ public class FamerMypageDaoImpl implements FamerMypageDao {
 	}
 
 	@Override
-	public String orderList(Order order) {
+	public String orderList(TBOrder order) {
 		// TODO Auto-generated method stub
 		return null;
 	}

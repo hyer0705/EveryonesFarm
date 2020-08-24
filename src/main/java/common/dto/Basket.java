@@ -3,47 +3,49 @@ package common.dto;
 public class Basket {
 
 	// member field
+	private int basketNo;
 	private int userNo;
-	private int isFarmer;
+	private int farmerNo;
 	private int productNo;
 	private int optionNo;
-
+	
+	// getter(), setter()
+	public int getBasketNo() {
+		return basketNo;
+	}
+	public void setBasketNo(int basketNo) {
+		this.basketNo = basketNo;
+	}
 	public int getUserNo() {
 		return userNo;
 	}
-
 	public void setUserNo(int userNo) {
 		this.userNo = userNo;
 	}
-
-	public int getIsFarmer() {
-		return isFarmer;
+	public int getFarmerNo() {
+		return farmerNo;
 	}
-
-	public void setIsFarmer(int isFarmer) {
-		this.isFarmer = isFarmer;
+	public void setFarmerNo(int farmerNo) {
+		this.farmerNo = farmerNo;
 	}
-
 	public int getProductNo() {
 		return productNo;
 	}
-
 	public void setProductNo(int productNo) {
 		this.productNo = productNo;
 	}
-
 	public int getOptionNo() {
 		return optionNo;
 	}
-
 	public void setOptionNo(int optionNo) {
 		this.optionNo = optionNo;
 	}
 
+	// toString()
 	@Override
 	public String toString() {
-		return "Basket [userNo=" + userNo + ", isFarmer=" + isFarmer + ", productNo=" + productNo + ", optionNo="
-				+ optionNo + "]";
+		return "Basket [basketNo=" + basketNo + ", userNo=" + userNo + ", farmerNo=" + farmerNo + ", productNo="
+				+ productNo + ", optionNo=" + optionNo + "]";
 	}
 
 }
